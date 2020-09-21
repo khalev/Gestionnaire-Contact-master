@@ -1,0 +1,58 @@
+<div class="content-spacing">
+  <div class="panel panel-primary" *ngIf="mode===1">
+    <div class="panel-heading">Edit Contact</div>
+    <div class="panel-body">
+      <form [formGroup]="contactForm" (ngSubmit)="editContact(contact.id)">
+        <div class="form-group">
+          <label for="prenom">Prenom : </label>
+          <input type="text" [formControlName]="contact.  prenom" id="prenom" class="form-control" [ngModel]="contact.prenom"/>
+
+        </div>
+        <div class="form-group">
+          <label for="nom">Nom : </label>
+          <input type="text" [formControlName]="contact.nom" id="nom" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label for="dateNaissance">Date Naissance : </label>
+          <input type="date" [formControlName]="contact.dateNaissance" id="dateNaissance" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label for="telephone">Telephone : </label>
+          <input type="text" formControlName="telephone" id="telephone" class="form-control"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="contactForm.invalid">Valider</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="panel panel-warning" *ngIf="mode===2">
+    <div class="panel-heading">Confirmation</div>
+    <div class="panel-body">
+      <div>
+        <label>N° : </label>
+        <label>{{contact.id}}</label>
+      </div>
+      <div>
+        <label>Prenom : </label>
+        <label>{{contact.prenom}}</label>
+
+      </div>
+      <div>
+        <label>Nom : </label>
+        <label>{{contact.nom}}</label>
+      </div>
+      <div>
+        <label for="dateNaissance">Date Naissance : </label>
+        <label>{{contact.dateNaissance}}</label>
+      </div>
+      <div>
+        <label>Telephone : </label>
+        <label>{{contact.telephone}}</label>
+      </div>
+
+      <button type="submit" (click)="mode=1" class="btn btn-primary btn-block">Nouveau Contact</button>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Tp_Contact
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: EL KHALEV
+Implementation-Vendor-Id: com.tuto
+Build-Jdk: 1.8.0_241
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Tp_Contact
+Created-By: Maven Integration for Eclipse
+
